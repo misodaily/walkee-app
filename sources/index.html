@@ -1,0 +1,57 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>지도 자료 출처 · Walkee</title><style>
+:root{--bg:#fafaf8;--fg:#16171a;--mute:#5c5f66;--line:#e6e6e2;--blue:#007aff}
+@media (prefers-color-scheme:dark){:root{--bg:#111214;--fg:#f2f2f4;--mute:#a0a3aa;--line:#26282c;--blue:#3d9bff}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 -apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard",sans-serif;word-break:keep-all}
+main{max-width:720px;margin:0 auto;padding:40px 20px 80px}
+header{display:flex;align-items:center;gap:10px;margin-bottom:28px}
+header a{color:var(--fg);text-decoration:none;font-weight:800;font-size:22px;letter-spacing:-.02em}
+h1{font-size:26px;margin:0 0 18px}h2{font-size:17px;margin:30px 0 8px}
+p,li{color:var(--mute);font-size:15px}ul{padding-left:20px}a{color:var(--blue)}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0}
+nav a{border:1px solid var(--line);border-radius:999px;padding:8px 16px;text-decoration:none;color:var(--fg);font-size:14px}
+footer{margin-top:48px;color:var(--mute);font-size:13px;border-top:1px solid var(--line);padding-top:16px}
+</style></head><body><main>
+<header><svg width="26" height="28" viewBox="0 0 19 21" aria-hidden="true"><g fill="var(--blue)"><g transform="translate(4.4 12.4) rotate(-8)"><ellipse cx="0" cy="-2.9" rx="3.6" ry="4.5"/><ellipse cx="0" cy="4.7" rx="2.8" ry="2.5"/></g><g transform="translate(13.6 7.6) rotate(8)"><ellipse cx="0" cy="-2.9" rx="3.6" ry="4.5"/><ellipse cx="0" cy="4.7" rx="2.8" ry="2.5"/></g></g></svg><a href="../">walkee</a></header>
+<h1>지도 자료 출처</h1>
+<p>Walkee의 지도, 길 찾기, 건물, 밝은 길 정보는 아래 공개 데이터로 만들었습니다. 각 데이터는 원본을 앱이 쓰는 형식으로 바꾸고 줄여서 앱 안에 넣었으며, 원 제공자가 앱을 보증하거나 추천하는 것은 아닙니다.</p>
+<h2>지도·길·공원 (OpenStreetMap)</h2>
+<p>출처: © OpenStreetMap 기여자. Open Database License(ODbL) 1.0</p>
+<p><a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a></p>
+<p>내려받은 곳: Geofabrik South Korea 추출본(south-korea-latest.osm.pbf), 2026년 10월 13일</p>
+<p><a href="https://download.geofabrik.de/asia/south-korea.html">https://download.geofabrik.de/asia/south-korea.html</a></p>
+<ul>
+<li>바탕 지도: 물·녹지·길·철길·지명·길 이름을 0.05도 조각으로 나누고 좌표를 정수로 줄여 앱이 직접 그립니다.</li>
+<li>걷는 길 연결망: 보행 가능한 길을 점과 선으로 바꿔 코스를 계산합니다. 길 종류(보행로·계단·비포장·큰길), 조명(lit), 가로등 표시를 함께 씁니다. 사유 도로·주차장 통로 등은 뺐습니다.</li>
+<li>공원 코스: 이름이 있는 공원 경계를 씁니다.</li>
+</ul>
+<p>이 앱의 지도·길 데이터베이스는 ODbL에 따라 이용할 수 있습니다.</p>
+<h2>건물 (행정안전부 도로명주소)</h2>
+<p>출처: 행정안전부 주소기반산업지원서비스, 도로명주소 건물 도형·건물군 내 동 도형(전체분, 2026년 10월 1일 기준)</p>
+<p><a href="https://business.juso.go.kr">https://business.juso.go.kr</a></p>
+<ul>
+<li>건물 윤곽을 좌표계(UTM-K)에서 경위도로 바꾸고 약 20cm 단위로 줄였습니다.</li>
+<li>아파트 같은 집합건물은 단지 전체 윤곽 대신 동별 도형을 그립니다.</li>
+<li>도로명주소 건물과 겹치지 않는 OpenStreetMap 건물은 함께 그립니다.</li>
+</ul>
+<h2>보안등·가로등 (밝은 길)</h2>
+<p>출처: 공공데이터포털</p>
+<p><a href="https://www.data.go.kr">https://www.data.go.kr</a></p>
+<ul>
+<li>행정안전부 전국보안등정보표준데이터</li>
+<li>서울특별시 가로등 위치 정보, 서울 구청별 보안등·가로등 위치(동대문구, 동작구, 서대문구, 서초구, 강동구, 관악구, 광진구, 송파구)</li>
+</ul>
+<p>좌표가 있는 등만 쓰며, 길마다 가까운 등 수를 세어 &#x27;밝은 길&#x27; 비율을 계산합니다.</p>
+<h2>CCTV·안전비상벨</h2>
+<p>출처: 공공데이터포털</p>
+<p><a href="https://www.data.go.kr">https://www.data.go.kr</a></p>
+<ul>
+<li>행정안전부 전국CCTV표준데이터</li>
+<li>행정안전부 전국안전비상벨위치표준데이터</li>
+</ul>
+<p>설치 지점 40m 안의 길에 &#x27;CCTV 근처&#x27; 표시를 붙입니다. 실제 작동 여부와 촬영 범위는 확인하지 않습니다.</p>
+<h2>지도 표시</h2>
+<p>지도는 Apple MapKit 위에 위 데이터로 직접 그린 그림을 얹어 보여 줍니다. Apple 지도 법적 고지:</p>
+<p><a href="https://www.apple.com/legal/internet-services/maps/terms-en.html">https://www.apple.com/legal/internet-services/maps/terms-en.html</a></p>
+<footer>© 김민수 · <a href="mailto:ai.asap.kr@gmail.com">ai.asap.kr@gmail.com</a></footer>
+</main></body></html>
